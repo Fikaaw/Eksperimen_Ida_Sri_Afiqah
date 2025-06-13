@@ -1,0 +1,37 @@
+name: Data Preprocessing Automation
+
+on:
+  push:
+    paths:
+      - 'lung_cancer_raw.csv'
+      - 'preprocessing/automate.py'
+  workflow_dispatch:
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas
+    
+    - name: Run preprocessing
+      run: |
+        python preprocessing/automate.py lung_cancer_raw.csv preprocessing/lung_cancer_clean.csv
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add preprocessing/lung_cancer_clean.csv
+        git commit -m "Update preprocessed data" || echo "No changes to commit"
+        git push
