@@ -3,7 +3,7 @@ name: Data Preprocessing Automation
 on:
   push:
     paths:
-      - 'lung_cancer_raw.csv'
+      - 'lung_cancer.csv'
       - 'preprocessing/automate.py'
   workflow_dispatch:
 
@@ -26,7 +26,7 @@ jobs:
     
     - name: Run preprocessing
       run: |
-        python preprocessing/automate.py lung_cancer_raw.csv preprocessing/lung_cancer_clean.csv
+        python preprocessing/automate.py lung_cancer.csv preprocessing/lung_cancer_cln.csv
     
     - name: Commit and push changes
       run: |
