@@ -32,6 +32,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add preprocessing/lung_cancer_clean.csv
+        git add preprocessing/lung_cancer_cln.csv
         git commit -m "Update preprocessed data" || echo "No changes to commit"
         git push
