@@ -1,4 +1,4 @@
-gender,age,smoking,yellow_fingers,anxiety,peer_pressure,chronic_disease,fatigue,allergy,wheezing,alcohol_consuming,coughing,shortness_of_breath,swallowing_difficulty,chest_pain,lung_cancer
+gender,age,smoking,yellow_fingers,anxiety,peer_pressure,chronic_disease,fatigue,allergy,wheezing,alcohol_consuming,coughing,shortness_of_breath,swallowing_difficulty,chest_pain,pulmonary_cancer
 0,69,0,1,1,0,0,1,0,1,1,1,1,1,1,1
 0,74,1,0,0,0,1,1,1,0,0,0,1,1,1,1
 1,59,0,0,0,1,0,1,0,1,0,1,1,0,1,0
