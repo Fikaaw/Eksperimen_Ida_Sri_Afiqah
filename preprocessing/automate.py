@@ -2,6 +2,7 @@ import pandas as pd
 import re
 import sys
 import os
+import pandas as pd
 
 def clean_column_names(df):
     cleaned_columns = []
